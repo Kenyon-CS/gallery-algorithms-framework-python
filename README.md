@@ -69,7 +69,7 @@ python3 run.py data/gallery.yaml data/show.yaml greedy data/scoring.yaml
 Or without an explicit scoring file:
 
 ```bash
-python3 run.py data/gallery.yaml data/show.yaml greedy
+python3 run.py data/gallery.yaml data/show.yaml greedy data/scoring.yaml
 ```
 
 You can also use the random baseline:
@@ -98,9 +98,9 @@ Duplicate Use:   0.00
 TOTAL:           110.00
 ```
 
-## Teaching ideas
+## Use
 
-This Python version is a good base for assignments such as:
+This Python version is a good base for goals such as:
 
 - add new scoring features
 - implement backtracking or hill climbing
