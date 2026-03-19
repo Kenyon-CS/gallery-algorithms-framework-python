@@ -1,0 +1,8 @@
+scoring:
+  type_match_reward: 15
+  type_mismatch_penalty: -50
+  capacity_overflow_penalty: -80
+  unplaced_penalty: -120
+  room_preference_reward: 10
+  duplicate_zone_penalty: -100
+  light_penalty_multiplier: 40

@@ -1,0 +1,33 @@
+show:
+  title: "Light, Motion, and Structure"
+  artworks:
+    - id: "A1"
+      title: "Striped Suspension"
+      type: "ceiling"
+      size: 2.5
+      light_sensitivity: 0.60
+      preferred_room: "Central Hall"
+    - id: "A2"
+      title: "Wall Sequence"
+      type: "wall"
+      size: 3.0
+      light_sensitivity: 0.50
+      preferred_room: "North Entry"
+    - id: "A3"
+      title: "Floor Vessel"
+      type: "floor"
+      size: 4.5
+      light_sensitivity: 0.45
+      preferred_room: "South Room"
+    - id: "A4"
+      title: "Looped Projection"
+      type: "video"
+      size: 1.0
+      light_sensitivity: 0.10
+      preferred_room: "Black Box"
+    - id: "A5"
+      title: "Large Wall Work"
+      type: "wall"
+      size: 5.5
+      light_sensitivity: 0.30
+      preferred_room: "North Entry"

@@ -1,0 +1,1 @@
+"""Gallery algorithms framework package."""

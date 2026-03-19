@@ -1,0 +1,39 @@
+gallery:
+  name: "Kenyon Teaching Gallery"
+  zones:
+    - id: "W1"
+      room: "North Entry"
+      type: "wall"
+      capacity: 6
+      light: 0.75
+      supports_video: false
+    - id: "W2"
+      room: "North Entry"
+      type: "wall"
+      capacity: 4
+      light: 0.35
+      supports_video: false
+    - id: "F1"
+      room: "Central Hall"
+      type: "floor"
+      capacity: 9
+      light: 0.55
+      supports_video: false
+    - id: "C1"
+      room: "Central Hall"
+      type: "ceiling"
+      capacity: 3
+      light: 0.40
+      supports_video: false
+    - id: "V1"
+      room: "Black Box"
+      type: "video"
+      capacity: 1
+      light: 0.05
+      supports_video: true
+    - id: "F2"
+      room: "South Room"
+      type: "floor"
+      capacity: 5
+      light: 0.65
+      supports_video: false
