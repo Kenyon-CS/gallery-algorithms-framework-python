@@ -1,29 +1,32 @@
 from __future__ import annotations
 
-from copy import deepcopy
+from math import inf
 
 from gallery.base import Algorithm
-from gallery.models import LayoutState
+from gallery.models import Gallery, LayoutState, Show
+from gallery.evaluator import Evaluator
 
 
 class GreedyAlgorithm(Algorithm):
-    def solve(self, gallery, show, evaluator):
+    def solve(self, gallery: Gallery, show: Show, evaluator: Evaluator) -> LayoutState:
         state = LayoutState(len(show.artworks))
         state.algorithm_name = self.name()
 
-        for artwork_index, _artwork in enumerate(show.artworks):
-            best_score = float("-inf")
+        for i in range(len(show.artworks)):
+            best_score = -inf
             best_zone = -1
 
-            for zone_index, _zone in enumerate(gallery.zones):
-                trial = deepcopy(state)
-                trial.placement[artwork_index] = zone_index
+            for z in range(len(gallery.zones)):
+                trial = LayoutState(len(show.artworks))
+                trial.placement = state.placement.copy()
+                trial.placement[i] = z
+                trial.algorithm_name = state.algorithm_name
                 score = evaluator.evaluate(trial, gallery, show)
                 if score > best_score:
                     best_score = score
-                    best_zone = zone_index
+                    best_zone = z
 
-            state.placement[artwork_index] = best_zone
+            state.placement[i] = best_zone
             evaluator.evaluate(state, gallery, show)
 
         evaluator.evaluate(state, gallery, show)
